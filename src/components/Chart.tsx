@@ -22,12 +22,7 @@ const Chart = () => {
           width={500}
           height={300}
           data={chartData}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
+          margin={{ top: 5, right: 30, bottom: 5, left: 20 }}
         >
           <XAxis dataKey="name" />
           <YAxis />

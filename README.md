@@ -4,4 +4,4 @@
 
 * yarn create next-app
 * yarn add react-icons
-* yarn add recharts@2.9.0
+* yarn add recharts
