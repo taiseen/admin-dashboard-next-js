@@ -6,12 +6,12 @@ import {
     MdHelpCenter,
     MdDashboard,
     MdAnalytics,
-    MdLogout,
     MdPeople,
     MdWork,
 } from "react-icons/md";
+import { SidebarType } from "@/types";
 
-const sidebar = [
+const sidebar: SidebarType[] = [
     {
         title: "Pages",
         list: [

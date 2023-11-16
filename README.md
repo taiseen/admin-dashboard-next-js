@@ -3,4 +3,5 @@
 ## Admin Dashboard | Next Js
 
 * yarn create next-app
-* yarn add react-icons@4.11.0
+* yarn add react-icons
+* yarn add recharts@2.9.0

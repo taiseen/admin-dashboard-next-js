@@ -10,13 +10,17 @@ import {
 const TopNavbar = () => {
   const pathName = usePathname();
 
+  // not work ==> fixed w-[calc(100%-360px)]
+  // working  ==> sticky top-4
+
   return (
-    <nav className="p-4 rounded bg-sidebar flex items-center justify-between select-none">
+    <nav className="p-4 rounded bg-sidebar flex items-center justify-between select-none sticky top-4">
       <p className="text-lg capitalize">{pathName.split("/").pop()}</p>
 
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-2 bg-input rounded px-2">
           <MdSearch size={20} />
+          
           <input
             type="text"
             placeholder="Search..."
