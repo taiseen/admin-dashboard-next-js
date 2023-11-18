@@ -1,10 +1,19 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { MdLogout } from "react-icons/md";
 import sidebar from "@/constants/sidebar";
 import SidebarLink from "./SidebarLink";
 import Image from "next/image";
 
 const Sidebar = () => {
+  const router = useRouter(); // user redirect --> programmatically by this...
+
+  const handleLogOut = (event: React.MouseEvent<HTMLElement>) => {
+    event.preventDefault();
+
+    router.push("/");
+  };
+
   return (
     <aside className="sticky top-[20px]">
       <div className="flex items-center gap-4 mb-6">
@@ -36,7 +45,10 @@ const Sidebar = () => {
         ))}
       </ul>
 
-      <button className="flex items-center gap-3 bg-slate-600 px-4 py-2 rounded-md fixed bottom-5 hover:bg-red-300 duration-150 hover:text-gray-800">
+      <button
+        onClick={handleLogOut}
+        className="flex items-center gap-3 bg-slate-600 px-4 py-2 rounded-md fixed bottom-5 hover:bg-red-300 duration-150 hover:text-gray-800"
+      >
         <span className="rotate-180">
           <MdLogout />
         </span>

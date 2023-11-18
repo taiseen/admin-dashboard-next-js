@@ -17,7 +17,12 @@ body {
         @apply px-4 py-2 outline-none rounded bg-transparent border border-slate-500 w-[45%] focus:border-green-600
     }
 
+    .editInputStyle {
+        @apply px-4 py-2 outline-none rounded bg-transparent border border-slate-500 focus:border-green-600
+    }
+
     .submitBtn {
         @apply text-xl w-full bg-gray-700 rounded py-4 cursor-pointer hover:bg-slate-600 duration-200
     }
+
 }

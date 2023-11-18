@@ -1,5 +1,4 @@
 "use client";
-
 import useScroll from "@/hooks/useScroll";
 import { usePathname } from "next/navigation";
 import {
@@ -10,17 +9,23 @@ import {
 } from "react-icons/md";
 
 const TopNavbar = () => {
-  const pathName = usePathname();
   const isScrolling = useScroll();
+  const pathName = usePathname();
 
-  let sectionName;
-  if (pathName.includes("products/")) {
-    sectionName = "Add New Product";
-  } else if (pathName.includes("users/")) {
-    sectionName = "Add New User";
-  } else {
-    sectionName = pathName.split("/").pop();
-  }
+  const rgxProduct = /\/products\/(\w+)/;
+  const rgxUser = /\/users\/(\w+)/;
+
+  const urlLastWord = pathName.split("/").pop();
+
+  const sectionName = pathName.includes("products/add")
+    ? "Add New Product"
+    : pathName.includes("users/add")
+    ? "Add New User"
+    : pathName.match(rgxProduct)
+    ? `Product id - ${urlLastWord}`
+    : pathName.match(rgxUser)
+    ? `User id - ${urlLastWord}`
+    : urlLastWord;
 
   // not work ==> fixed w-[calc(100%-360px)]
   // working  ==> sticky top-4
