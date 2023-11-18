@@ -7,7 +7,7 @@ const Transactions = () => {
       <h2 className="mb-2 text-gray-300">Latest Transactions</h2>
 
       <table className="w-full">
-        <thead className="">
+        <thead>
           <tr className="text-gray-300">
             <td className="p-2">Name</td>
             <td>Status</td>
@@ -16,7 +16,7 @@ const Transactions = () => {
           </tr>
         </thead>
 
-        <tbody className="">
+        <tbody>
           {transactionsData.map((data, idx) => {
             const { amount, date, img, name, status } = data;
 

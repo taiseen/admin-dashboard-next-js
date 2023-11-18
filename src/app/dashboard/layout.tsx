@@ -1,5 +1,6 @@
 import TopNavbar from "@/components/TopNavbar";
 import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
 import { ChildrenType } from "@/types";
 
 const DashboardLayout = ({ children }: ChildrenType) => {
@@ -13,6 +14,8 @@ const DashboardLayout = ({ children }: ChildrenType) => {
         <TopNavbar />
 
         {children}
+
+        <Footer />
       </div>
     </div>
   );
