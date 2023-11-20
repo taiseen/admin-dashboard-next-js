@@ -32,3 +32,17 @@ export type TransactionsDataType = {
     date: string;
     amount: string;
 }
+
+export type UserType = {
+    _id?: string;
+    userName: string;
+    email: string;
+    password: string;
+    address: string;
+    phone: string;
+    img: string;
+    isAdmin: boolean;
+    isActive: boolean;
+    createdAt?: Date;
+}
+

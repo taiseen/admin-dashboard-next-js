@@ -56,7 +56,7 @@ const Products = () => {
             <td className="p-4">
               <div className="flex items-center gap-2">
                 <Link
-                  href={`/dashboard/products/${"productId"}`}
+                  href={`/dashboard/products/${"8989898989erer898"}`}
                   className="bg-blue-500 px-2 py-1 rounded"
                 >
                   View

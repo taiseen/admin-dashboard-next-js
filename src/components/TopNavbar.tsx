@@ -33,7 +33,7 @@ const TopNavbar = () => {
   return (
     <nav
       className={`p-4 rounded bg-sidebar flex items-center justify-between select-none sticky top-4 duration-200 
-      ${isScrolling ? "bg-[rgba(152,147,147,0.1)] pt-4 backdrop-blur-md" : ""}`}
+      ${isScrolling ? "bg-[rgba(152,147,147,0.1)] backdrop-blur-md" : ""}`}
     >
       <p className="text-lg capitalize">{sectionName}</p>
 

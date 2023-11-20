@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Single Product",
@@ -6,7 +7,105 @@ export const metadata: Metadata = {
 };
 
 const SingleProductPage = () => {
-  return <div>SingleProductPage</div>;
+  return (
+    <div className="mt-4 flex gap-6">
+      <div className="flex-1 p-4 bg-slate-800 text-center font-semibold text-lg rounded h-max">
+        <div className="w-full h-[350px] relative rounded overflow-hidden mb-3">
+          <Image fill src={"/noProduct.jpg"} alt="productImg" />
+        </div>
+        <span>OnePlus 7t</span>
+      </div>
+
+      <div className="flex-[3] p-4 bg-slate-800 rounded">
+        <form className="flex flex-col gap-4">
+          <div className="flex gap-4">
+            <div className="flex flex-col flex-1">
+              <label htmlFor="" className="text-gray-400">
+                Product Title
+              </label>
+              <input
+                type="text"
+                name="pTitle"
+                placeholder="OnePlus 7t"
+                className="editInputStyle"
+              />
+            </div>
+
+            <div className="flex flex-col flex-1">
+              <label htmlFor="" className="text-gray-400">
+                Price
+              </label>
+              <input
+                type="number"
+                name="pPrice"
+                placeholder="$300"
+                className="editInputStyle"
+              />
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="flex flex-col flex-1">
+              <label htmlFor="" className="text-gray-400">
+                Stock
+              </label>
+              <input
+                type="number"
+                name="pStock"
+                placeholder="10"
+                className="editInputStyle"
+              />
+            </div>
+
+            <div className="flex flex-col flex-1">
+              <label htmlFor="" className="text-gray-400">
+                Color
+              </label>
+              <input
+                type="text"
+                name="pColor"
+                placeholder="Black"
+                className="editInputStyle"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col">
+            <label htmlFor="" className="text-gray-400">
+              Size
+            </label>
+            <input
+              type="text"
+              name="pSize"
+              placeholder="Small"
+              className="editInputStyle"
+            />
+          </div>
+
+          <div className="flex gap-4 justify-between">
+            <div className="flex flex-col flex-1">
+              <label htmlFor="" className="text-gray-400">
+                Category
+              </label>
+              <select name="pCat" className="editInputStyle focus:bg-slate-800">
+                <option value="kitchen">Kitchen</option>
+                <option value="computer">Computer</option>
+              </select>
+            </div>
+
+            <div className="flex flex-col flex-1">
+              <label htmlFor="" className="text-gray-400">
+                Description
+              </label>
+              <textarea className="editInputStyle" rows={10}/>
+            </div>
+          </div>
+
+          <input type="submit" value="Update" className="submitBtn" />
+        </form>
+      </div>
+    </div>
+  );
 };
 
 export default SingleProductPage;
