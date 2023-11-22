@@ -5,3 +5,7 @@
 * yarn create next-app
 * yarn add react-icons
 * yarn add recharts
+
+# Learning context:
+* File & folder structure
+* Layout base UI
